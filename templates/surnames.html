@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Surnames{% endblock %}
+
+{% block content %}
+
+<article>
+  <div id="article_text">
+    <h2>Surnames</h2>
+    <ul>
+      {% for surname in surnames %}
+      <li><a href="{{ SITEURL }}/surnames/{{ surname.0|string|lower|replace(" ", "-" ) }}.html">{{ surname.0 }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>
+{% endblock %}

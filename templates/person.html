@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}{{ personality }}{% endblock %}
+
+{% block content %}
+
+{% for article in articles_page.object_list %}
+<article>
+  <div id="article_title">
+    <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+    <div id="article_meta">
+      <p>{{ article.locale_date }}</p>
+      {% if article.tags %}
+      <p>
+	<i class="fa fa-tags"></i>
+	{% for tag in article.tags %}
+	<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
+	{% endfor %}
+      </p>
+      {% endif %}
+      {% if article.surnames %}
+      <p>
+	<i class="fa fa-university"></i>
+	{% for surname in article.surnames %}
+	<a href="{{ SITEURL }}/{{ surname.url }}">{{ surname }}</a>{% if not loop.last %},{% endif %}
+	{% endfor %}
+      </p>
+      {% endif %}
+      {% if article.people %}
+      <p>
+	<i class="fa fa-user"></i>
+	{% for person in article.people %}
+	<a href="{{ SITEURL }}/{{ person.url }}">{{ person }}</a>{% if not loop.last %},{% endif %}
+	{% endfor %}
+      </p>
+      {% endif %}
+
+    </div>
+    <div id="article_text">
+      {{ article.summary }} <a href="{{ SITEURL }}/{{ article.url }}">continue</a>
+    </div>
+  </div>
+</article>
+{% endfor %}
+
+{% endblock %}

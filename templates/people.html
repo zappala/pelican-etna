@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}People{% endblock %}
+
+{% block content %}
+
+<article>
+  <div id="article_text">
+    <h2>People</h2>
+    <ul>
+      {% for person in people %}
+      <li><a href="{{ SITEURL }}/people/{{ person.0|string|lower|replace(" ", "-" ) }}.html">{{ person.0 }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>
+{% endblock %}
