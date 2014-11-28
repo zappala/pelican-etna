@@ -2,14 +2,12 @@
 <html lang="{{ DEFAULT_LANG }}">
 
 <head>
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
-  {% assets filters="less", output="css/style.css", "css/style.less" %}
-  <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
-  {% endassets %}
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/responsive-nav.css">
-  <script src="{{ SITEURL }}/theme/js/responsive-nav.js"></script>
-  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/foundation/5.3.3/css/normalize.css">
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/foundation/5.3.3/css/foundation.min.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Nobile' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900' rel='stylesheet' type='text/css'>
 
@@ -38,27 +36,30 @@
 
 <body>
   <header>
-    <div id="name">
-      <div class="padding center">
-	<span class="sitename">{{ SITENAME }}</span><br>
-	<span class="sitesub">{{ SITESUB }}</span>
-      </div>
-    </div>
-    <nav>
-      <div class="padding">
-	<ul>
-	  <li><a href="{{ SITEURL }}/index.html">Home</a></li>
-	  <li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
-	  <li><a href="{{ SITEURL }}/people.html">People</a></li>
-	  <li><a href="{{ SITEURL }}/surnames.html">Surnames</a></li>
-	  <li><a href="{{ SITEURL }}/surnames.html">About</a></li>
+    {% block header %}
+    {% endblock %}
+    <div class="contain-to-grid">
+      <nav class="top-bar" data-topbar>
+	<ul class="title-area">
+	  <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 	</ul>
-      </div>
-    </nav>
-    <div class='clear'>
+	<section class="top-bar-section">
+
+	  <!-- Left Nav Section -->
+	  <ul class="left">
+	    <li><a href="{{ SITEURL }}/index.html">Home</a></li>
+	    <li><a href="{{ SITEURL }}/blog.html">Blog</a></li>
+	    <li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
+	    <li><a href="{{ SITEURL }}/people.html">People</a></li>
+	    <li><a href="{{ SITEURL }}/surnames.html">Surnames</a></li>
+	    <li><a href="{{ SITEURL }}/surnames.html">About</a></li>
+	  </ul>
+	</section>
+      </nav>
     </div>
   </header>
   <main>
+    <div class="row">
     {% block content %}
     {% endblock %}
 
@@ -67,6 +68,7 @@
       {% endblock %}
     </footer>
 
+    </div>
   </main>
   <script>
     var navigation = responsiveNav("#nav", {

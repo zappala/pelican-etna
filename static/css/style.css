@@ -1,20 +1,39 @@
+html {
+  font-size: 18px;
+  line-height: 1.2;
+  font-family: 'Lato';
+  letter-spacing: 0.05em;
+}
 body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
   color: #333333;
-  font-family: 'Lato';
-  letter-spacing: 0.05em;
-  font-size: 20px;
-  line-height: 1.2;
+}
+header #name .sitesub {
+  font-size: 0.5em;
+  letter-spacing: 0.2em;
+}
+strong,
+b {
+  color: #444;
 }
 a {
   color: #000000;
   text-decoration: none;
 }
+button.small,
+.button.small {
+  padding: 8px 12px;
+}
+button.small i,
+.button.small i {
+  padding-left: 5px;
+  vertical-align: middle;
+}
 hr {
   color: #000000;
-  background-color: #666666;
+  background-color: #444444;
   height: 1px;
   border: none;
 }
@@ -73,6 +92,7 @@ img.socialsmall {
   font-size: 1.4em;
   font-family: 'Lato';
   background-color: #7c6954;
+  background-color: #5598b2;
   color: #ffffff;
 }
 .nav-toggle {
@@ -98,70 +118,57 @@ main header {
   color: #000000;
   font-weight: 100;
 }
-main header nav ul {
-  font-size: 0.8em;
-  padding: 20px 0;
-}
-main header nav ul li {
-  border-bottom: 1px solid #ffffff;
-}
-main header nav ul a {
-  background-color: #990012;
-  background-color: #1e1049;
-  padding: 10px 40px;
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  color: #ffffff;
-  font-weight: 100;
-  text-transform: uppercase;
-}
-main header nav ul a:focus {
-  opacity: 1;
-  outline: none;
-  background-color: #666666;
-}
 main article {
   max-width: 700px;
-  padding: 0px 40px 20px 20px;
-}
-main article div#article_title {
+  padding: 0px 15px;
   font-family: 'Lato';
-  font-size: 0.8em;
+  font-size: 1rem;
   letter-spacing: 0.1em;
 }
-main article div#article_title h2 {
+main article div#article_title h1 {
+  font-family: 'Lato';
+  font-size: 1.5rem;
+  font-weight: bold;
   margin: 20px 0px 0px 0px;
 }
 main article div#article_meta {
   font-size: 0.7em;
-  color: #666666;
+  color: #444444;
+  color: #5598b2;
 }
 main article div#article_meta p {
   margin: 0;
   padding: 0;
 }
 main article div#article_meta a {
-  color: #50b2a2;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 2px solid #5598b2;
 }
 main article div#article_text {
-  font-size: 23px;
+  font-size: 1em;
   letter-spacing: 0;
 }
 main article div#article_text div#article_nav {
   margin-top: 10px;
 }
 main article div#article_text a {
-  color: #50b2a2;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 2px solid #5598b2;
 }
-main article div#article_text h2 {
-  font-size: 1.5em;
+main article div#article_text h1 {
+  font-family: 'Lato';
+  font-size: 1.3rem;
   margin: 20px 0px 0px 0px;
   font-weight: 100;
 }
+main article div#article_text h2 {
+  font-family: 'Lato';
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 20px 0px 0px 0px;
+}
 main article div#article_text h3 {
+  font-family: 'Lato';
   font-size: 1.1em;
 }
 main article div#article_text li {
@@ -179,7 +186,7 @@ main article div#article_text pre {
   margin: 22px 2px 22px 2px;
   padding: 2px;
   color: #000000;
-  border-left: 3px solid #0e94ec;
+  border-left: 3px solid #5598b2;
   font-size: 0.75em;
   font-family: monospace;
   background: #dddddd;
@@ -207,21 +214,21 @@ main footer {
 }
 main footer a.button_accent {
   padding: 10px;
-  border: 2px solid #0e94ec;
+  border: 2px solid #5598b2;
   border-radius: 20px;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   text-transform: uppercase;
-  color: #0e94ec;
+  color: #5598b2;
   font-size: 1.125em;
 }
 main footer a.button_accent:hover {
   color: #ffffff;
-  background-color: #0e94ec;
+  background-color: #5598b2;
 }
 main footer a.button_accent:active {
   color: #ffffff;
-  background-color: #0e94ec;
+  background-color: #5598b2;
 }
 main div#ending_message {
   padding: 0 40px 0 40px;
@@ -297,25 +304,6 @@ main div#ending_message {
 .icon-facebook:before {
   content: "\e004";
 }
-@media screen and (min-width: 600px) {
-  main header nav {
-    background-color: #990012;
-    padding: 15px 15px;
-  }
-  main header nav ul li {
-    display: inline !important;
-    padding: 0 0 0 10px;
-    border-bottom: 0px;
-  }
-  main header nav ul a {
-    display: inline !important;
-    padding: 0px;
-    background-color: #990012;
-    color: #ffffff;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-}
 @media screen and (min-width: 1024px) {
   body {
     font-size: 26px;
@@ -324,19 +312,15 @@ main div#ending_message {
   .separator {
     display: hidden;
   }
-  .padding {
-    width: 80%;
-    margin: 0 auto;
-  }
   header {
     border-top: 0;
   }
-  header #name {
-    text-transform: none;
+  header #imageheader {
     overflow: auto;
     background-image: url('../../images/home/header.png');
     background-repeat: no-repeat;
     height: 400px;
+    text-transform: none;
     text-align: left;
     font-size: 2.5em;
     font-weight: 900;
@@ -347,50 +331,31 @@ main div#ending_message {
     color: #ffffff;
     padding: 0px;
   }
-  header #name .center {
+  header #imageheader .center {
     margin-top: 120px;
     padding: 10px;
     text-align: center;
   }
-  header #name .sitesub {
+  header #imageheader .sitesub {
     font-size: 0.5em;
     letter-spacing: 0.2em;
   }
-  header nav {
-    background-color: #7c6954;
-    background-color: #1e1049;
-    background-color: #990012;
-    padding: 15px 15px;
-  }
-  header nav ul {
-    width: 80%;
-    margin: 0 auto;
-    font-size: 0.6em;
-    padding: 20px 0;
-  }
-  header nav ul li {
-    display: inline !important;
-    padding: 0 0 0 10px;
-    border-bottom: 0px;
-  }
-  header nav ul a {
-    display: inline !important;
-    padding: 0px;
-    background-color: #7c6954;
-    background-color: #1e1049;
-    background-color: #990012;
+  header #nameheader {
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-family: 'Source Sans Pro';
+    letter-spacing: 0.05em;
+    line-height: 1em;
+    background-color: #5598b2;
     color: #ffffff;
-    font-weight: bold;
-    text-transform: uppercase;
+    padding-top: 10px;
   }
-  header nav ul a:focus {
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    opacity: 1;
-    outline: none;
-    background-color: #ffffff;
+  header #nameheader .center {
+    padding: 10px;
+    text-align: center;
   }
-  main {
-    width: 80%;
-    margin: 0 auto;
+  header #nameheader .sitesub {
+    font-size: 0.5em;
+    letter-spacing: 0.2em;
   }
 }
