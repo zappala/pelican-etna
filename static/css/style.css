@@ -10,43 +10,40 @@ body {
   background-color: #ffffff;
   color: #333333;
 }
-header #name .sitesub {
+header #nameheader {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: 'Source Sans Pro';
+  letter-spacing: 0.05em;
+  line-height: 1em;
+  background-color: #5598b2;
+  color: #ffffff;
+  padding-top: 10px;
+}
+header #nameheader .center {
+  padding: 10px;
+  text-align: center;
+}
+header #nameheader .sitesub {
   font-size: 0.5em;
   letter-spacing: 0.2em;
 }
-strong,
-b {
+strong, b {
   color: #444;
 }
 a {
   color: #000000;
   text-decoration: none;
 }
-button.small,
-.button.small {
+button.small, .button.small {
   padding: 8px 12px;
 }
-button.small i,
-.button.small i {
+button.small i, .button.small i {
   padding-left: 5px;
   vertical-align: middle;
 }
-hr {
-  color: #000000;
-  background-color: #444444;
-  height: 1px;
-  border: none;
-}
 .clear {
   clear: both;
-}
-.gray {
-  background-color: #dddddd;
-  text-align: center;
-  padding: 5px;
-}
-.align-right {
-  float: right;
 }
 .hidden {
   text-indent: -9999px;
@@ -91,19 +88,8 @@ img.socialsmall {
   padding: 10px 0;
   font-size: 1.4em;
   font-family: 'Lato';
-  background-color: #7c6954;
   background-color: #5598b2;
   color: #ffffff;
-}
-.nav-toggle {
-  padding: 5px 40px 0px 0px;
-  float: right;
-}
-.separator {
-  display: none;
-}
-.icon-share-alt {
-  font-size: 0.8em;
 }
 .icon-align-justify {
   font-size: 1.3em;
@@ -209,56 +195,6 @@ main article div#article_text blockquote .fw {
   min-width: 60px;
   font-family: monospace;
 }
-main footer {
-  padding: 40px;
-}
-main footer a.button_accent {
-  padding: 10px;
-  border: 2px solid #5598b2;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  text-transform: uppercase;
-  color: #5598b2;
-  font-size: 1.125em;
-}
-main footer a.button_accent:hover {
-  color: #ffffff;
-  background-color: #5598b2;
-}
-main footer a.button_accent:active {
-  color: #ffffff;
-  background-color: #5598b2;
-}
-main div#ending_message {
-  padding: 0 40px 0 40px;
-  font-color: #dddddd;
-  font-size: 0.675em;
-}
-#footer {
-  margin-top: 20px;
-  border-top: 1px solid #ccc;
-  font-size: 0.8em;
-  color: #666;
-  padding: 10px 0;
-}
-#footer h4 {
-  color: #000000;
-  font-family: 'Lato';
-  margin: 0;
-  padding: 5px 0;
-}
-#footer p {
-  padding: 5px 0;
-  margin: 0;
-}
-#footer .share a {
-  font-size: 1.3em;
-  display: inline-block;
-  margin: 1.4rem 1.6rem 1.6rem 0;
-  color: #BBC7CC;
-  text-decoration: none;
-}
 /*************
  * ICONS
  *************/
@@ -304,39 +240,37 @@ main div#ending_message {
 .icon-facebook:before {
   content: "\e004";
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 600px) {
   body {
     font-size: 26px;
     line-height: 1.5;
   }
-  .separator {
-    display: hidden;
+  .top-bar-section ul {
+    padding: 0px 25px;
   }
-  header {
-    border-top: 0;
+  header .headerimage {
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    z-index: 1;
   }
-  header #imageheader {
-    overflow: auto;
-    background-image: url('../../images/home/header.png');
-    background-repeat: no-repeat;
-    height: 400px;
-    text-transform: none;
-    text-align: left;
+  header .center {
+    text-align: center;
+  }
+  header .title {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
     font-size: 2.5em;
     font-weight: 900;
     font-family: 'Source Sans Pro';
     letter-spacing: 0.05em;
     line-height: 1em;
-    background-color: #ffffff;
     color: #ffffff;
     padding: 0px;
   }
-  header #imageheader .center {
-    margin-top: 120px;
-    padding: 10px;
-    text-align: center;
-  }
-  header #imageheader .sitesub {
+  header .title .sitesub {
     font-size: 0.5em;
     letter-spacing: 0.2em;
   }

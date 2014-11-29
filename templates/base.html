@@ -2,8 +2,8 @@
 <html lang="{{ DEFAULT_LANG }}">
 
 <head>
-  <link rel="stylesheet" href="http://cdn.jsdelivr.net/foundation/5.3.3/css/normalize.css">
-  <link rel="stylesheet" href="http://cdn.jsdelivr.net/foundation/5.3.3/css/foundation.min.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/css/normalize.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/css/foundation.min.css">
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -14,6 +14,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="{{ AUTHOR }}">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/vendor/modernizr.js"></script>
   {% block description %}
   {% endblock %}
 
@@ -39,9 +40,9 @@
     {% block header %}
     {% endblock %}
     <div class="contain-to-grid">
-      <nav class="top-bar" data-topbar>
+      <nav class="top-bar" data-topbar role="navigation">
 	<ul class="title-area">
-	  <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+	  <li class="toggle-topbar menu-icon"></li>
 	</ul>
 	<section class="top-bar-section">
 
@@ -58,22 +59,16 @@
       </nav>
     </div>
   </header>
+  {% block homeimage %}
+  {% endblock %}
   <main>
     <div class="row">
     {% block content %}
     {% endblock %}
-
-    <footer>
-      {% block footer %}
-      {% endblock %}
-    </footer>
-
     </div>
   </main>
-  <script>
-    var navigation = responsiveNav("#nav", {
-      label: '<i class=\"icon-align-justify icon-reorder\"></i>'
-    });
-  </script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/vendor/jquery.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/vendor/fastclick.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation.min.js"></script>
 </body>
 </html>
