@@ -28,12 +28,38 @@ header #nameheader .sitesub {
   font-size: 0.5em;
   letter-spacing: 0.2em;
 }
+#wide > .row {
+  background-color: #b2af70;
+  background-color: #dddddd;
+  max-width: 100%;
+}
+#wide > .row > .column, #wide > .row > .columns {
+  padding: 0px;
+}
+.announce {
+  padding: 10px;
+}
+.announce h1 {
+  font-size: 1.5rem;
+}
+.announce img {
+  padding-bottom: 10px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato';
+}
 strong, b {
   color: #444;
 }
 a {
-  color: #000000;
+  color: #333333;
   text-decoration: none;
+  border-bottom: 2px solid #5598b2;
 }
 button.small, .button.small {
   padding: 8px 12px;
@@ -249,7 +275,6 @@ main article div#article_text blockquote .fw {
     padding: 0px 25px;
   }
   header .headerimage {
-    min-width: 1024px;
     width: 100%;
     height: auto;
     z-index: 1;
@@ -291,5 +316,8 @@ main article div#article_text blockquote .fw {
   header #nameheader .sitesub {
     font-size: 0.5em;
     letter-spacing: 0.2em;
+  }
+  header .announce {
+    padding: 50px;
   }
 }

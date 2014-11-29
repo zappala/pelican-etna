@@ -1,7 +1,37 @@
-{% extends "blog.html" %}
+{% extends "base.html" %}
 
 {% block homeimage %}
-<div>
-  <img class="headerimage" src="/images/home/header.png"></img>
+<div id="wide">
+  <div class="row">
+    <div class="large-6 columns">
+      <img class="headerimage" src="/images/home/kids.png"></img>
+    </div>
+    <div class="large-6 columns">
+      <div class="announce">
+	<div class="row">
+	  <div class="large-4 columns">
+	    <img src="/images/home/zappala.jpg">
+	  </div>
+	  <div class="large-8 columns">
+	    <p>This is where I store photos and documents for my
+	    ancestors.</p>
+	    <p>You can reach me at daniel.zappala [at] gmail.com or on
+	    Facebook.</p>
+	  </div>
+	</div>
+	<p>-- Daniel Zappala <a href="https://www.facebook.com/daniel.zappala"><i class="fi-social-facebook"></i></a></p>
+	<h1>Have pictures or documents to share?</h1>
+	<p>Please contact me and I'll add them here.</p>
+	<h1>Want to see a family history?</h1>
+	<p>You can view these relatives on FamilySearch:</p>
+	<ul>
+	  <li><a href="https://familysearch.org/tree/#view=ancestor&person=KL1S-H2G&spouse=LFHL-LCC">Mariano Salvatore Zappala</a></li>
+	  <li><a href="https://familysearch.org/tree/#view=ancestor&person=LFHL-LCC&spouse=KL1S-H2G">Anna Sposato</a></li>
+	  <li><a href="https://familysearch.org/tree/#view=ancestor&person=KGMM-48N&spouse=LCRR-R74">Kenneth James Campbell</a></li>
+	  <li><a href="https://familysearch.org/tree/#view=ancestor&person=LCRR-R74&spouse=KGMM-48N">Marguerite Elizabeth Siegler</a></li>
+	</ul>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}

@@ -37,9 +37,13 @@
 
 <body>
   <header>
-    {% block header %}
-    {% endblock %}
-    <div class="contain-to-grid">
+    <div id="nameheader">
+      <div class="padding center">
+	<span class="sitename">{{ SITENAME }}</span><br>
+	<span class="sitesub">{{ SITESUB }}</span>
+      </div>
+    </div>
+    <div class="contain-to-grid show-for-medium-up">
       <nav class="top-bar" data-topbar role="navigation">
 	<ul class="title-area">
 	  <li class="toggle-topbar menu-icon"></li>
@@ -48,7 +52,7 @@
 
 	  <!-- Left Nav Section -->
 	  <ul class="left">
-	    <li><a href="{{ SITEURL }}/index.html">Home</a></li>
+	    <li><a href="{{ SITEURL }}">Home</a></li>
 	    <li><a href="{{ SITEURL }}/blog.html">Blog</a></li>
 	    <li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
 	    <li><a href="{{ SITEURL }}/people.html">People</a></li>
@@ -58,17 +62,47 @@
 	</section>
       </nav>
     </div>
-  </header>
-  {% block homeimage %}
-  {% endblock %}
-  <main>
-    <div class="row">
-    {% block content %}
-    {% endblock %}
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+	
+        <!-- OFF CANVAS MENU BAR -->
+        <nav class="tab-bar hide-for-medium-up">
+	  
+          <section class="left-small">
+            <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+          </section>
+	  
+        </nav> <!-- END NAV.TAB-BAR HIDE-FOR-LARGE-UP -->
+	
+        <!-- OFF CANVAS MENU -->
+        <aside class="left-off-canvas-menu">
+          <ul class="off-canvas-list">
+            <li><label>Navigation</label></li>
+            <li><a href="{{ SITEURL }}">Home</a></li>
+            <li><a href="{{ SITEURL }}/blog.html">Blog</a></li>
+            <li><a href="{{ SITEURL }}/archive.html">Archive</a></li>
+	    <li><a href="{{ SITEURL }}/people.html">People</a></li>
+	    <li><a href="{{ SITEURL }}/surnames.html">Surnames</a></li>
+	    <li><a href="{{ SITEURL }}/surnames.html">About</a></li>
+          </ul>
+        </aside>
+	{% block homeimage %}
+	{% endblock %}
+	<main>
+	  <div class="row">
+	    {% block content %}
+	    {% endblock %}
+	  </div>
+	</main>
+	<a class="exit-off-canvas"></a>
+      </div>
     </div>
-  </main>
+  </header>
   <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/vendor/jquery.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/vendor/fastclick.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
 </body>
 </html>

@@ -1,18 +1,13 @@
-@orange: #ff6600;
-@red:  #ff0000;
-@dark-red: #990012;
-@dark-blue: #1e1049;
 @black:  #000000;
 @white:  #ffffff;
-@light-gold:  #d1c589;
 @light-grey:  #dddddd;
 @med-grey:  #444;
 @dark-grey:  #333;
 @blue:  #5598B2;
-@light-blue:  #50b2a2;
 @accent:  @blue;
 @brown: #7c6954;
 @green: #B2AF70;
+
 
 @sans: 'Lato';
 @serif: 'Volkorn', serif;
@@ -55,6 +50,33 @@ header {
     }
 }
 
+// Home Page
+
+#wide > .row {
+    background-color: @green;
+    background-color: @light-grey;
+    max-width: 100%;
+}
+
+#wide > .row > .column, #wide > .row > .columns {
+    padding: 0px;
+}
+
+.announce {
+    padding: 10px;
+    h1 {
+	font-size: 1.5rem;
+    }
+    img {
+	padding-bottom: 10px;
+    }
+}
+
+// Headers
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: @sans;
+}
 
 // Miscellaneous styles
 
@@ -63,8 +85,9 @@ strong, b {
 }
 
 a {
-    color: @black;
+    color: @dark-grey;
     text-decoration: none;
+    border-bottom: 2px solid @blue;
 }
 
 button.small, .button.small {
@@ -324,7 +347,6 @@ main {
 
     header {
 	.headerimage {
-	    min-width: 1024px;
 	    width: 100%;
 	    height: auto;
 	    z-index: 1;
@@ -369,7 +391,9 @@ main {
 	    padding-top: 10px;
 	}
 
-
+	.announce {
+	    padding: 50px;
+	}
 	nav {
 	}
     }
